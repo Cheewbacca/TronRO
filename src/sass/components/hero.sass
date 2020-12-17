@@ -1,0 +1,30 @@
+.hero
+    background-image: url('../img/main_bg.png');
+    height: calculateHeight(700)
+    max-height: 700px
+    background-repeat: no-repeat;
+    padding: calculateHeight(24) calculateWidth(30)
+    background-size: auto;
+    position: relative
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between
+    &_total
+        transform: translate(0, calculateHeight(24 + 30))
+        &-white
+            background-color: $white;
+            width: fit-content
+            padding: 8px calculateWidth(40)
+            border-radius: 20px 20px 0px 0px
+            margin: 0 auto
+        &-orange
+            background: $goldGradient
+            padding: 15px calculateWidth(90)
+            border-radius: 100px
+    .telegram
+        position: absolute;
+        right: calculateWidth(30);
+        top: calculateHeight(24);
+        p 
+            text-align: center
