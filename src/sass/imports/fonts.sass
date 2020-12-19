@@ -40,6 +40,24 @@ $size40: calculateWidth(40)
 $size50: calculateWidth(50)
 $size160: calculateWidth(160);
 
+// Tablet sizes
+$sizeTablet16: tW(16)
+$sizeTablet18: tW(18)
+$sizeTablet20: tW(20)
+$sizeTablet30: tW(30)
+$sizeTablet40: tW(40)
+$sizeTablet50: tW(50)
+$size1Tablet60: tW(160);
+
+// Mobile sizes
+$sizeMobile16: 16px
+$sizeMobile18: 18px
+$sizeMobile20: 20px
+$sizeMobile30: 30px
+$sizeMobile40: 40px
+$sizeMobile50: 50px
+$sizeMobile160: 160px
+
 // Fonts
 
 .h1_font
@@ -48,84 +66,140 @@ $size160: calculateWidth(160);
     color: $light;
     font-weight: regular
     text-align: center
+    @media screen and ( max-width: 768px )
+        font-size: $size1Tablet60;
+    @media screen and ( max-width: 500px )
+        font-size: $sizeMobile160;
 
 .font_30
     font-family: $circular
     font-size: $size30
     color: $darkOrange
     font-weight: $medium
+    @media screen and (max-width: 768px)
+        font-size: $sizeTablet30
+    @media screen and ( max-width: 500px  )
+        font-size: $sizeMobile30
 
 .font_40
     font-family: $circular
     font-size: $size40
     color: $white
     font-weight: $bold
+    @media screen and (max-width: 768px)
+        font-size: $sizeTablet40
+    @media screen and ( max-width: 500px  )
+        font-size: $sizeMobile40
 
 .black_title
     font-family: $circular
     font-size: $size20
     color: $black
     font-weight: $semibold
+    @media screen and (max-width: 768px)
+        font-size: $sizeTablet20
+    @media screen and ( max-width: 500px )
+        font-size: $sizeMobile20
 
 .main_text
     font-family: $circular
     font-size: $size16
     color: $dark
     font-weight: $medium
+    @media screen and (max-width: 768px)
+        font-size: $sizeTablet16
+    @media screen and ( max-width: 500px  )
+        font-size: $sizeMobile16
 
 .gold_title
     font-family: $circular
     font-size: $size30
     color: $gold
     font-weight: $bold
+    @media screen and (max-width: 768px)
+        font-size: $sizeTablet30
+    @media screen and ( max-width: 500px  )
+        font-size: $sizeMobile30
 
 .small_violet_font
     font-family: $circular
     font-size: $size16
     color: $violet
     font-weight: $semibold;
+    @media screen and (max-width: 768px)
+        font-size: $sizeTablet16
+    @media screen and ( max-width: 500px  )
+        font-size: $sizeMobile16
 
 .small_dark_font
     font-family: $circular
     font-size: $size16
     color: $dark
     font-weight: $medium;
+    @media screen and (max-width: 768px)
+        font-size: $sizeTablet16
+    @media screen and ( max-width: 500px  )
+        font-size: $sizeMobile16
 
 .brown_font
     font-family: $circular
     font-size: $size50
     color: $brown
     font-weight: $bold;
+    @media screen and (max-width: 768px)
+        font-size: $sizeTablet50
+    @media screen and ( max-width: 500px  )
+        font-size: $sizeMobile50
 
 .brown_font_small
     font-family: $circular
     font-size: $size30
     color: $brown
     font-weight: $bold;
+    @media screen and (max-width: 768px)
+        font-size: $sizeTablet30
+    @media screen and ( max-width: 500px  )
+        font-size: $sizeMobile30
 
 .count_font
     font-family: $circular
     font-size: $size18
     color: $darkViolet
     font-weight: $semibold;
+    @media screen and (max-width: 768px)
+        font-size: $sizeTablet18
+    @media screen and ( max-width: 500px  )
+        font-size: $sizeMobile18
 
 .href_font
     font-family: $circular
     font-size: $size30
     color: $darkViolet
     font-weight: $semibold;
+    @media screen and (max-width: 768px)
+        font-size: $sizeTablet30
+    @media screen and ( max-width: 500px  )
+        font-size: $sizeMobile30
 
 .big_black_font
     font-family: $circular
     font-size: $size30
     color: $black
     font-weight: $bold;
+    @media screen and (max-width: 768px)
+        font-size: $sizeTablet30
+    @media screen and ( max-width: 500px  )
+        font-size: $sizeMobile30
 
 .orange_font
     font-family: $circular
     font-size: $size20
     color: $textOrange
     font-weight: $bold;
+    @media screen and (max-width: 768px)
+        font-size: $sizeTablet20
+    @media screen and ( max-width: 500px )
+        font-size: $sizeMobile20
 
 
 

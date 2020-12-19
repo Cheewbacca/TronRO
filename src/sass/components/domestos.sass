@@ -1,6 +1,8 @@
 .domestication
     margin-top: calculateHeight(200)
     position: relative
+    @media screen and ( max-width: 768px )
+        padding: 0 12px 
     &_info
         display: grid;
         grid-template-columns: repeat( 2, 1fr )
@@ -12,7 +14,11 @@
         width: 100%;
         position: absolute;
         z-index: 1;
+        @media screen and ( max-width: 768px )
+            max-width: 90%;
+            margin: 0 auto
         .progressbar 
+            left: 50%;
             &-item 
                 border-radius: 40px
                 background: $white;
@@ -25,6 +31,8 @@
                 align-items: center;
                 justify-content: center
                 min-height: 70px;
+                @media screen and ( max-width: 768px )
+                    margin: 0 10px
             .active                    
                 .progressbar-item
                     border: 2px solid $borderOrange !important

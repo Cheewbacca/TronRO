@@ -11,7 +11,8 @@
             grid-row-gap: 60px;
         @media screen and ( max-width: 900px )
             grid-template-columns: repeat( 4, 1fr )
-            grid-row-gap: 60px;
+        @media screen and ( max-width: 768px )
+            grid-template-columns: repeat( 2 , 1fr )
         &-item
             cursor: pointer
             &_bg
@@ -30,7 +31,10 @@
                     position: relative
                     margin: 0 auto
                     height: calculateHeight(273)
-
+                    @media screen and ( max-width: 768px )
+                        height: tH(273)
+                    @media screen and ( max-width: 500px )
+                        height: 273px
             .first_hero 
                 &::before
                     background: $firstHeroGradient

@@ -6,13 +6,19 @@
         padding: 80px 0
         display: flex;
         align-items: flex-start
+        @media screen and ( max-width: 768px )
+            padding: 80px 12px
         img
             flex-basis: 20%;
             object-fit: contain
             margin: 0 auto
             max-width: 20%;
+            @media screen and ( max-width: 768px )
+                display: none
         .investments
             flex-basis: 60%;
+            @media screen and ( max-width: 768px )
+                flex-basis: 100%;
             &-top
                 width: 100%;
                 justify-content: space-between
@@ -27,6 +33,10 @@
                     background: $violetGradient;
                     .top
                         padding: calculateHeight(25) calculateWidth(40)
+                        @media screen and ( max-width: 768px )
+                            padding: tH(25) tW(40)
+                        @media screen and ( max-width: 500px )
+                            padding: 25px 40px
                     .bottom
                         background: $darkViolet;
                         padding: 10px
@@ -36,25 +46,39 @@
                     display: block
                     
             &-cells
+                @media screen and ( max-width: 768px )
+                    max-width: 100%;
+                    width: 100%;
                 .ranks__content
                     grid-template-columns: repeat( 5  , minmax( 100px, calculateWidth(100) ) );
                     @media screen and ( max-width: 1400px )
                         grid-template-columns: repeat( 4  , minmax( 100px, calculateWidth(100) ) );
                     @media screen and ( max-width: 1000px )
                         grid-template-columns: repeat( 3  , minmax( 100px, calculateWidth(100) ) );
+                    @media screen and ( max-width: 768px )
+                        max-width: 100%
+                        grid-template-columns: repeat( 2  , 1fr );
                     &-item
                         h4 
                             margin-top: 10px
                         &_bg
                             &::before
                                 background-color: $purple
+                                @media screen and ( max-width: 768px )
+                                    margin-top: -20%;
                             img
                                 height: calculateHeight(150)
                                 max-width: initial
+                                @media screen and ( max-width: 768px )
+                                    display: block
                     .empty
                         cursor: auto
                         .ranks__content-item_bg
                             height: calculateHeight(150)
+                            @media screen and ( max-width: 768px )
+                                height: tH(150)
+                            @media screen and ( max-width: 500px )
+                                height: 150px
                             &::before
                                 opacity: .18
                             img 
@@ -72,8 +96,16 @@
                     align-items: center
                     span 
                         padding: calculateHeight(20) calculateWidth(35)
+                        @media screen and ( max-width: 768px )
+                            padding: tH(25) tW(40)
+                        @media screen and ( max-width: 500px )
+                            padding: 25px 40px
                 &_icon
                     background: $darkViolet
                     margin-left: auto
                     padding: calculateHeight(20) calculateWidth(35)
                     border-radius: 0px 10px 10px 0px
+                    @media screen and ( max-width: 768px )
+                        padding: tH(25) tW(40)
+                    @media screen and ( max-width: 500px )
+                        padding: 25px 40px

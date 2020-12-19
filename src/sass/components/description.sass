@@ -1,6 +1,16 @@
 .description
     padding-top: calculateHeight(127)
+    @media screen and ( max-width: 768px )
+        padding: tH(127) 12px 0
+    @media screen and ( max-width: 500px )
+        padding-top: 125px
     p 
         max-width: 50%
+        @media screen and ( max-width: 768px )
+            max-width: initial;
         &:not(:first-child)
             margin-top: calculateHeight(20)
+            @media screen and ( max-width: 768px )
+                padding-top: tH(20)
+            @media screen and ( max-width: 500px )
+                padding-top: 15px
