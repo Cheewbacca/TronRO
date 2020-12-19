@@ -1,0 +1,79 @@
+.statistic
+    margin-top: 150px
+    background-image: url('../img/bg2.png')
+    background-repeat: no-repeat;
+    &__content
+        padding: 80px 0
+        display: flex;
+        align-items: flex-start
+        img
+            flex-basis: 20%;
+            object-fit: contain
+            margin: 0 auto
+            max-width: 20%;
+        .investments
+            flex-basis: 60%;
+            &-top
+                width: 100%;
+                justify-content: space-between
+                display: flex;
+                &__local
+                    ul 
+                        li 
+                            &:not(:first-child)
+                                margin-top: 15px
+                &__available
+                    border-radius: 10px
+                    background: $violetGradient;
+                    .top
+                        padding: calculateHeight(25) calculateWidth(40)
+                    .bottom
+                        background: $darkViolet;
+                        padding: 10px
+                        width: 100%;
+                        border-radius: 0px 0px 10px 10px
+                span 
+                    display: block
+                    
+            &-cells
+                .ranks__content
+                    grid-template-columns: repeat( 5  , minmax( 100px, calculateWidth(100) ) );
+                    @media screen and ( max-width: 1400px )
+                        grid-template-columns: repeat( 4  , minmax( 100px, calculateWidth(100) ) );
+                    @media screen and ( max-width: 1000px )
+                        grid-template-columns: repeat( 3  , minmax( 100px, calculateWidth(100) ) );
+                    &-item
+                        h4 
+                            margin-top: 10px
+                        &_bg
+                            &::before
+                                background-color: $purple
+                            img
+                                height: calculateHeight(150)
+                                max-width: initial
+                    .empty
+                        cursor: auto
+                        .ranks__content-item_bg
+                            height: calculateHeight(150)
+                            &::before
+                                opacity: .18
+                            img 
+                                display: none
+
+            &-bottom
+                width: 100%;
+                h5 
+                    margin-bottom: 15px
+                a 
+                    background: $violetGradient;
+                    width: 100%;
+                    display: flex;
+                    border-radius: 10px
+                    align-items: center
+                    span 
+                        padding: calculateHeight(20) calculateWidth(35)
+                &_icon
+                    background: $darkViolet
+                    margin-left: auto
+                    padding: calculateHeight(20) calculateWidth(35)
+                    border-radius: 0px 10px 10px 0px

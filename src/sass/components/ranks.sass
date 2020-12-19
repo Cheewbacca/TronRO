@@ -1,0 +1,60 @@
+.ranks
+    margin-top: calculateHeight(180)
+    padding: 0 60px
+    &__content
+        margin-top: calculateHeight(40)
+        display: grid;
+        grid-template-columns: repeat( 7, 1fr )
+        grid-column-gap: 60px
+        @media screen and ( max-width: 1200px )
+            grid-template-columns: repeat( 5, 1fr )
+            grid-row-gap: 60px;
+        @media screen and ( max-width: 900px )
+            grid-template-columns: repeat( 4, 1fr )
+            grid-row-gap: 60px;
+        &-item
+            cursor: pointer
+            &_bg
+                position: relative
+                &::before
+                    position: absolute;
+                    width: 100%;
+                    height: 70%;
+                    content: ''
+                    left: 0;
+                    right: 0;
+                    top: 50%;
+                    margin-top: -40%;
+                    border-radius: 20px
+                img 
+                    position: relative
+                    margin: 0 auto
+                    height: calculateHeight(273)
+
+            .first_hero 
+                &::before
+                    background: $firstHeroGradient
+            .second_hero
+                &::before
+                    background: $secondHeroGradient
+            .third_hero
+                &::before
+                    background: $thirdHeroGradient
+            .fourth_hero
+                &::before
+                    background: $fourthHeroGradient
+            .fives_hero
+                &::before
+                    background: $fivesHeroGradient
+            .sixth_hero
+                &::before
+                    background: $sixthHeroGradient
+            .sevens_hero
+                &::before
+                    background: $seventhHeroGradient
+            h4 
+                margin-top: 40px
+
+        .disabled
+            cursor: auto
+            opacity: .2
