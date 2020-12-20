@@ -108,11 +108,14 @@
                     align-items: center
                     span 
                         padding: calculateHeight(20) calculateWidth(35)
+                        @media screen and ( min-width: 500px )
+                            display: none
                         @media screen and ( max-width: 768px )
                             padding: tH(25) tW(40)
                         @media screen and ( max-width: 500px )
                             padding: 25px 12px
                     .mobile_hide
+                        display: block
                         @media screen and ( max-width: 500px )
                             font-size: 0
 

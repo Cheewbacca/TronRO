@@ -23,37 +23,37 @@
       <section class="ranks">
         <h2 class="gold_title text-center">РАНГИ МИДГРАДА</h2>
         <ul class="ranks__content">
-          <li class="ranks__content-item">
+          <li class="ranks__content-item" data-hero="supernew">
             <div class="ranks__content-item_bg first_hero"><img src="static/img/hero1.png" alt=""></div>
             <h4 class="black_title text-center">Суперновичок</h4>
             <p class="small_violet_font text-center">Открыт</p>
           </li>
-          <li class="ranks__content-item">
+          <li class="ranks__content-item" data-hero="gunsmith">
             <div class="ranks__content-item_bg second_hero"><img src="static/img/hero2.png" alt=""></div>
             <h4 class="black_title text-center">Оружейник</h4>
             <p class="small_violet_font text-center">Открыт</p>
           </li>
-          <li class="ranks__content-item disabled">
+          <li class="ranks__content-item disabled" data-hero="comandor">
             <div class="ranks__content-item_bg third_hero"><img src="static/img/hero3.png" alt=""></div>
             <h4 class="black_title text-center">Командор</h4>
             <p class="small_violet_font text-center">Закрыто</p>
           </li>
-          <li class="ranks__content-item disabled">
+          <li class="ranks__content-item disabled" data-hero="paladin">
             <div class="ranks__content-item_bg fourth_hero"><img src="static/img/hero4.png" alt=""></div>
             <h4 class="black_title text-center">Паладин</h4>
             <p class="small_violet_font text-center">Закрыто</p>
           </li>
-          <li class="ranks__content-item disabled">
+          <li class="ranks__content-item disabled" data-hero="archimag">
             <div class="ranks__content-item_bg fives_hero"><img src="static/img/hero5.png" alt=""></div>
             <h4 class="black_title text-center"> Архимаг</h4>
             <p class="small_violet_font text-center">Закрыто</p>
           </li>
-          <li class="ranks__content-item disabled">
+          <li class="ranks__content-item disabled" data-hero="professor">
             <div class="ranks__content-item_bg sixth_hero"><img src="static/img/hero6.png" alt=""></div>
             <h4 class="black_title text-center">Профессор</h4>
             <p class="small_violet_font text-center">Закрыто</p>
           </li>
-          <li class="ranks__content-item disabled">
+          <li class="ranks__content-item disabled" data-hero="mistic">
             <div class="ranks__content-item_bg sevens_hero"><img src="static/img/hero7.png" alt=""></div>
             <h4 class="black_title text-center">Мистик</h4>
             <p class="small_violet_font text-center">Закрыто</p>
@@ -112,7 +112,7 @@
               </ul>
             </div>
             <div class="investments-bottom">
-              <h5 class="href_font">Реферальная ссылка</h5><a href="#"><span class="black_title white mobile_hide">https://www.flaticon.com/free-icon/link_455691?</span><span class="black_title white">Click to copy</span>
+              <h5 class="href_font">Реферальная ссылка</h5><a href="https://www.flaticon.com/free-icon/link_455691?" title="click to copy" id="referal_link"><span class="black_title white mobile_hide">https://www.flaticon.com/free-icon/link_455691?</span><span class="black_title white">Click to copy</span>
                 <div class="investments-bottom_icon"><svg xmlns="http://www.w3.org/2000/svg" width="25.226" height="25.23" viewBox="0 0 25.226 25.23">
 <g id="link" transform="translate(-0.039 0)">
 <g id="Group_37" data-name="Group 37" transform="translate(0.039 8.111)">
@@ -172,14 +172,14 @@
       </section>
     </main>
     <div class="modal" id="modal_ranks">
-      <div class="modal__bg"></div>
+      <div class="modal__bg" id="modal_bg"></div>
       <div class="modal_cross"><a href="#" id="cross"> </a>
         <p class="black_title white">Вернуться назад</p>
       </div>
       <div class="modal__content">
-        <div class="modal__content-image"><img src="static/img/hero1.png" alt=""></div>
+        <div class="modal__content-image"><img src="" alt="" id="hero_image"></div>
         <div class="modal__content-info">
-          <h2 class="font_60" id="hero_name">Паладин</h2><span class="black_title_medium">Цена</span><span class="font_60" id="price">20 000 TRX</span><span class="black_title_medium">Доходность</span><span class="font_60" id="income">1,15% в день</span>
+          <h2 class="font_60" id="hero_name">Паладин</h2><span class="black_title_medium">Цена</span><span class="font_60"><span id="price"> 20 000 </span> TRX</span><span class="black_title_medium">Доходность</span><span class="font_60"><span id="income"> 1,15% </span>% в день</span>
           <div class="buy">
             <button class="font_60" id="minus">- </button>
             <p class="font_60" id="counter">6</p>
@@ -187,7 +187,7 @@
           </div><a class="href_font white text-center" href="#" id="buy">Купить</a>
         </div>
         <div class="modal__content-cells">
-          <p class="big_black_font">Ячейки героя</p><span class="small_dark_font black">( лимит на покупку 6 штук )</span><span class="black_title">6 из 16 </span>
+          <p class="big_black_font">Ячейки героя</p><span class="small_dark_font black">( лимит на покупку 6 штук )</span><span class="black_title">6 из <span id="potentialCell"> 16 </span> </span>
           <div class="table"> 
             <div class="table_item active"><svg xmlns="http://www.w3.org/2000/svg" width="37.097" height="48.265" viewBox="0 0 37.097 48.265">
 <g id="locked-padlock" transform="translate(-56.313)">
