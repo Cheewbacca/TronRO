@@ -1,4 +1,5 @@
 @import 'imports/reset.sass'
+@import 'imports/mixins.sass'
 @import 'imports/functions.sass'
 @import 'imports/colors.sass'
 @import 'imports/fonts.sass'
@@ -14,3 +15,156 @@ body
         @import 'components/statistic'
         @import 'components/domestos'
         @import 'components/rules'
+    .modal
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-image: url(../img/bg.png);
+        z-index: 999;
+        max-height: 100vh;
+        &_cross
+            position: absolute;
+            z-index: 9999999;
+            top: 40px;
+            left: 40px
+            display: flex;
+            align-items: center;
+            justify-content: center
+            #cross 
+                display: block
+                width: calculateWidth(60)
+                height: calculateWidth(60)
+                background: transparent;
+                margin-right: 20px;
+                border-radius: 10px
+                box-shadow: inset 0 0 calculateWidth(60) rgba(0,0,0,.3);
+                position: relative
+                &::after,
+                &::before
+                    content: '';
+                    height: 40%;
+                    width: 4px;
+                    background: $white;
+                    position: absolute;
+                    top: 50%;
+                    margin-top: -20%;
+                    left: 50%;
+                    margin-left: -2px
+                    transform: rotate(45deg)
+                &::before
+                    transform: rotate(-45deg)
+        &__content
+            width: 100%;
+            height: 100%;
+            padding: calculateWidth(100)
+            background-size: cover;
+            z-index: 99999;
+            position: relative;
+            display: grid;
+            grid-template-columns: repeat( 3, 1fr )
+            grid-column-gap: 100px
+            &-image
+                display: flex;
+                align-items: center
+                img 
+                    width: 70%;
+                    object-fit: cover;
+                    margin-left: auto
+            &-info
+                display: flex;
+                flex-direction: column;
+                .buy
+                    margin-top: calculateHeight(50)
+                    display: grid
+                    width: 100%;
+                    grid-template-columns: repeat( 3, 1fr )
+                    grid-column-gap: 20px
+                    button
+                        cursor: pointer
+                    button, 
+                    p 
+                        border-radius: 10px
+                        display: flex;
+                        align-items: center;
+                        justify-content: center
+                        background-color: $counter_btn
+                        border: none;
+                        outline: none;
+                    p 
+                        background-color: $counter;
+                a
+                    padding: 20px 0;
+                    background-color: $darkViolet
+                    border-radius: 10px
+                    margin-top: calculateHeight(25)
+
+            &-cells
+                span
+                    &:not(:first-child)
+                        margin-right: 30px
+                .table  
+                    display: grid;
+                    grid-template-columns: repeat( 3, 1fr )
+                    grid-gap: 20px
+                    margin-top: 20px
+                    padding-right: 20px
+                    height: calculateHeight(320)
+                    overflow-y: scroll
+                    @include scrollbars(.5em, $violet, $gray);
+                    &_item
+                        width: calculateWidth(100)
+                        height: calculateWidth(100)
+                        display: flex;
+                        align-items: center;
+                        justify-content: center
+                        background-color: #DCDCDC
+                        border-radius: 10px 
+                        svg 
+                            --lock-color: #8D8D8D
+                    .active
+                        background-color: $purple
+                        svg 
+                            display: none
+                    .opened
+                        border: 1px solid $darkViolet
+                        background-color: $purple
+                        svg 
+                            --lock-color: #55619C
+
+                .buy_cell
+                    margin-top: 5px
+                    &-lock
+                        width: calculateWidth(60)
+                        height: calculateWidth(60)
+                        border-radius: 50%;
+                        border: 3px solid $white;
+                        background-color: $darkViolet;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center
+                        transform: translate( 0, 50%)
+                        svg 
+                            width: 40%;
+                            --lock-color: #ffffff
+                    &-content
+                        padding: 45px 30px; 
+                        background-color: $darkViolet;
+                        border-radius: 10px
+                    a
+                        padding: 10px 50px;
+                        background: $darkViolet;
+                        border: 3px solid $white;
+                        border-radius: 10px
+                        transform: translate( 0, -50%)
+
+
+
+    .modal__bg
+        width: 25%;
+        height: 100%;
+        position: absolute;
+        background: red;

@@ -38,6 +38,7 @@ $size20: calculateWidth(20)
 $size30: calculateWidth(30)
 $size40: calculateWidth(40)
 $size50: calculateWidth(50)
+$size60: calculateWidth(60)
 $size160: calculateWidth(160);
 
 // Tablet sizes
@@ -47,6 +48,7 @@ $sizeTablet20: tW(20)
 $sizeTablet30: tW(30)
 $sizeTablet40: tW(40)
 $sizeTablet50: tW(50)
+$sizeTablet60: tW(60)
 $size1Tablet60: tW(160);
 
 // Mobile sizes
@@ -56,6 +58,7 @@ $sizeMobile20: 20px
 $sizeMobile30: 30px
 $sizeMobile40: 40px
 $sizeMobile50: 50px
+$sizeMobile60: 60px
 $sizeMobile160: 80px
 
 // Fonts
@@ -96,6 +99,16 @@ $sizeMobile160: 80px
     font-size: $size20
     color: $black
     font-weight: $semibold
+    @media screen and (max-width: 768px)
+        font-size: $sizeTablet20
+    @media screen and ( max-width: 500px )
+        font-size: $sizeMobile20
+
+.black_title_medium
+    font-family: $circular
+    font-size: $size20
+    color: $black
+    font-weight: $medium
     @media screen and (max-width: 768px)
         font-size: $sizeTablet20
     @media screen and ( max-width: 500px )
@@ -201,6 +214,15 @@ $sizeMobile160: 80px
     @media screen and ( max-width: 500px )
         font-size: $sizeMobile20
 
+.font_60
+    font-family: $circular
+    font-size: $size60;
+    color: $black;
+    font-weight: $bold;
+    @media screen and (max-width: 768px)
+        font-size: $sizeTablet60
+    @media screen and ( max-width: 500px )
+        font-size: $sizeMobile60
 
 
 

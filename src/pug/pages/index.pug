@@ -14,5 +14,70 @@ html
             include components/domestos
             include components/rules
 
+        #modal_ranks.modal
+            .modal__bg
+            .modal_cross
+                a(href="#")#cross 
+                p.black_title.white Вернуться назад
+            .modal__content
+                .modal__content-image
+                    img(src="static/img/hero1.png", alt="")
+                .modal__content-info
+                    h2#hero_name.font_60 Паладин
+                    span.black_title_medium Цена
+                    span#price.font_60 20 000 TRX
+                    span.black_title_medium Доходность
+                    span#income.font_60 1,15% в день
+                    .buy
+                        button#minus.font_60 - 
+                        p#counter.font_60 6
+                        button#plus.font_60 +
+                    a(href="#")#buy.href_font.white.text-center Купить
+                .modal__content-cells
+                    p.big_black_font Ячейки героя
+                    span.small_dark_font.black ( лимит на покупку 6 штук )
+                    span.black_title 6 из 16 
+                    .table  
+                        .table_item.active
+                            include svg/lock
+                        .table_item.active
+                            include svg/lock
+                        .table_item.active
+                            include svg/lock
+                        .table_item.active
+                            include svg/lock
+                        .table_item.active
+                            include svg/lock
+                        .table_item.active
+                            include svg/lock
+                        .table_item.opened
+                            include svg/lock
+                        .table_item
+                            include svg/lock
+                        .table_item
+                            include svg/lock
+                        .table_item
+                            include svg/lock
+                        .table_item
+                            include svg/lock
+                        .table_item
+                            include svg/lock
+                        .table_item
+                            include svg/lock
+                        .table_item
+                            include svg/lock
+                        .table_item
+                            include svg/lock
+                        .table_item
+                            include svg/lock
+
+                    .buy_cell.flex-column-center
+                        .buy_cell-lock
+                            include svg/lock
+                        .buy_cell-content
+                            span.black_title_medium.white.text-center Цена дополнительной ячейки
+                            p.gold_title.white.text-center <span id="price_per_cell"> 6 000 </span> Кристаллов
+                        a(href="#").buy_cell-link.href_font.white Купить
+                     
         script(src="static//js//libs.min.js")
         script(src="static//js//main.js")
