@@ -3,9 +3,13 @@
     position: relative
     @media screen and ( max-width: 768px )
         padding: 0 12px 
+    @media screen and ( max-width: 500px )
+        margin-top: 50px
     &_info
         display: grid;
         grid-template-columns: repeat( 2, 1fr )
+        @media screen and ( max-width: 500px )
+            grid-template-columns: 1fr
         &-text
             display: flex;
             flex-direction: column;

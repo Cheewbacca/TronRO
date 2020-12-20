@@ -28,6 +28,7 @@
                 &__local
                     @media screen and ( max-width: 500px )
                         width: 100%;
+                        margin-top: 15px
                     ul 
                         li 
                             &:not(:first-child)
@@ -35,6 +36,10 @@
                 &__available
                     border-radius: 10px
                     background: $violetGradient;
+                    @media screen and ( max-width: 500px )
+                        width: 100%;
+                        margin-top: 15px
+                        text-align: center
                     .top
                         padding: calculateHeight(25) calculateWidth(40)
                         @media screen and ( max-width: 768px )
@@ -106,7 +111,11 @@
                         @media screen and ( max-width: 768px )
                             padding: tH(25) tW(40)
                         @media screen and ( max-width: 500px )
-                            padding: 25px 40px
+                            padding: 25px 12px
+                    .mobile_hide
+                        @media screen and ( max-width: 500px )
+                            font-size: 0
+
                 &_icon
                     background: $darkViolet
                     margin-left: auto
