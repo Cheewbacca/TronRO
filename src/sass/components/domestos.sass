@@ -82,3 +82,12 @@
                     top: 18px;
                     left: -50%;
                     z-index: -1;
+                @media screen and ( max-width: 500px )
+                    width: auto
+                    float: initial
+                    &::after
+                        content: initial
+                    &:first-child
+                        display: none
+                    &:last-child
+                        display: none
