@@ -4,7 +4,7 @@ html
         meta(charset="utf-8")
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
         link(rel="stylesheet", href="static\\css\\main.css")
-        link(rel="stylesheet", href="static\\css\\slick.css")
+        link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css")
     body
         include components/hero
         main
@@ -14,72 +14,7 @@ html
             include components/domestos
             include components/rules
 
-        #modal_ranks.modal
-            .modal__bg#modal_bg
-            #prev
-            #next
-            .modal_cross
-                a(href="#")#cross 
-                p.black_title.white Вернуться назад
-            .modal__content
-                .modal__content-image
-                    img(src="", alt="")#hero_image
-                .modal__content-info
-                    h2#hero_name.font_60 Паладин
-                    span.black_title_medium Цена
-                    span.font_60 <span id="price"> 20 000 </span> TRX
-                    span.black_title_medium Доходность
-                    span.font_60 <span id="income"> 1,15% </span>% в день
-                    .buy
-                        button#minus.font_60 - 
-                        p#counter.font_60 6
-                        button#plus.font_60 +
-                    a(href="#")#buy.href_font.white.text-center Купить
-                .modal__content-cells
-                    p.big_black_font Ячейки героя
-                    span.small_dark_font.black ( лимит на покупку 6 штук )
-                    span.black_title 6 из <span id="potentialCell"> 16 </span> 
-                    .table  
-                        .table_item.active
-                            include svg/lock
-                        .table_item.active
-                            include svg/lock
-                        .table_item.active
-                            include svg/lock
-                        .table_item.active
-                            include svg/lock
-                        .table_item.active
-                            include svg/lock
-                        .table_item.active
-                            include svg/lock
-                        .table_item.opened
-                            include svg/lock
-                        .table_item
-                            include svg/lock
-                        .table_item
-                            include svg/lock
-                        .table_item
-                            include svg/lock
-                        .table_item
-                            include svg/lock
-                        .table_item
-                            include svg/lock
-                        .table_item
-                            include svg/lock
-                        .table_item
-                            include svg/lock
-                        .table_item
-                            include svg/lock
-                        .table_item
-                            include svg/lock
-
-                    .buy_cell.flex-column-center
-                        .buy_cell-lock
-                            include svg/lock
-                        .buy_cell-content
-                            span.black_title_medium.white.text-center Цена дополнительной ячейки
-                            p.gold_title.white.text-center <span id="price_per_cell"> 6 000 </span> Кристаллов
-                        a(href="#").buy_cell-link.href_font.white Купить
+        include components/modal
                      
         script(src="static//js//libs.min.js")
         script(src="static//js//main.js")

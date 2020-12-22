@@ -2,6 +2,7 @@
     background-image: url('../img/main_bg.png');
     height: calculateHeight(700)
     max-height: 700px
+    min-height: 500px
     background-repeat: no-repeat;
     padding: calculateHeight(24) calculateWidth(30)
     background-size: auto;
@@ -15,10 +16,12 @@
     @media screen and ( max-width: 768px )
         height: tH(700)
         padding: tH(24) tW(30)
+        min-height: initial
     @media screen and ( max-width: 500px )
         height: 500px
         padding: 24px 12px
     &_total
+        position: relative
         transform: translate(0, calculateHeight(24 + 30))
         @media screen and ( max-width: 768px )
             transform: translate(0, tH(24 + 30))
@@ -42,6 +45,16 @@
                 padding: 8px tW(90)
             @media screen and ( max-width: 500px )
                 padding: 8px 12px
+        .heroes_animation
+            position: absolute;
+            bottom: 100%
+            left: 50%;
+            width: 100%;
+            margin-left: -50%;
+            z-index: -1;
+            display: flex;
+            align-items: center;
+            justify-content: center
     .telegram
         position: absolute;
         right: calculateWidth(30);
