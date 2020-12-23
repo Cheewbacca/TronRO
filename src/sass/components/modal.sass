@@ -9,7 +9,7 @@
     background-image: url(../img/bg.png);
     z-index: 999;
     max-height: 100vh;
-    display: none;
+    display: none;        
     #prev,
     #next
         position: absolute;
@@ -28,6 +28,8 @@
         justify-content: center
         transform: translate( calculateWidth(-10), 0);
         transition: transform .3s
+        @media screen and ( max-width: 768px )
+            display: none !important
         &:hover
             transform: translate( 0, 0)
         &::after
@@ -54,6 +56,12 @@
         display: flex;
         align-items: center;
         justify-content: center
+        @media screen and ( max-width: 768px )
+            top: 12px;
+            left: 12px
+        p
+            @media screen and ( max-width: 768px )
+                display: none
         #cross 
             display: block
             width: calculateWidth(60)
@@ -68,6 +76,13 @@
                     transform: rotate(225deg)
                 &::before
                     transform: rotate(-225deg)
+            @media screen and ( max-width: 768px )
+                width: tW(60)
+                height: tW(60)
+            @media screen and ( max-width: 500px )
+                width: 50px
+                height: 50px
+                
             &::after,
             &::before
                 content: '';
@@ -93,6 +108,12 @@
         display: grid;
         grid-template-columns: repeat( 3, 1fr )
         grid-column-gap: 100px
+        @media screen and ( max-width: 768px )
+            padding: 25px
+            grid-template-columns: 1fr;
+            overflow: scroll
+        @media screen and ( max-width: 500px )
+            padding: 12px
         &-image
             display: flex;
             align-items: center
@@ -101,6 +122,8 @@
                 object-fit: cover;
                 margin-left: auto;
                 transition: opacity .3s;
+                @media screen and ( max-width: 768px )
+                    width: 30%
             .show
                 opacity: 1
             .hide
@@ -144,6 +167,8 @@
                     background-color: $purple
 
         &-cells
+            @media screen and ( max-width: 768px )
+                margin-top: 25px
             span
                 &:not(:first-child)
                     margin-right: 30px
@@ -156,6 +181,8 @@
                 height: calculateHeight(320)
                 overflow-y: scroll
                 @include scrollbars(.5em, $violet, $gray);
+                @media screen and ( max-width: 768px )
+                    grid-template-columns: repeat( 2, 1fr )
                 &_item
                     width: calculateWidth(100)
                     height: calculateWidth(100)
@@ -166,6 +193,12 @@
                     border-radius: 10px 
                     svg 
                         --lock-color: #8D8D8D
+                    @media screen and ( max-width: 768px )
+                        width: tW(100)
+                        height: tW(100)
+                    @media screen and ( max-width: 500px )
+                        width: 100px
+                        height: 100px
                 .active
                     background-color: $purple
                     svg 
@@ -178,6 +211,8 @@
 
             .buy_cell
                 margin-top: 5px
+                @media screen and ( max-width: 768px )
+                    margin-top: 20px
                 &-lock
                     width: calculateWidth(60)
                     height: calculateWidth(60)
@@ -188,6 +223,12 @@
                     align-items: center;
                     justify-content: center
                     transform: translate( 0, 50%)
+                    @media screen and ( max-width: 768px )
+                        width: tW(60)
+                        height: tW(60)
+                    @media screen and ( max-width: 500px )
+                        width: 60px
+                        height: 60px
                     svg 
                         width: 40%;
                         --lock-color: #ffffff

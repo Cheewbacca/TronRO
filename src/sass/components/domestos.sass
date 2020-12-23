@@ -16,8 +16,12 @@
             display: flex;
             flex-direction: column;
             justify-content: center
+            @media screen and ( max-width: 768px )
+                opacity: 1
         img 
             opacity: 0
+            @media screen and ( max-width: 768px )
+                opacity: 1
     &_switcher
         width: 100%;
         position: absolute;
